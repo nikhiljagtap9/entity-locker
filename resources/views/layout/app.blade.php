@@ -136,7 +136,7 @@
 
 
 					<!--begin::Header-->
-					<div id="kt_header" style="" class="header align-items-stretch">
+					<div id="kt_header" class="header align-items-stretch">
 						<!--begin::Container-->
 						<div class="container-fluid d-flex align-items-stretch justify-content-between">
 							<!--begin::Aside mobile toggle-->
@@ -158,8 +158,8 @@
 
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-								<a href="../../demo1/dist/index.html" class="d-lg-none">
-									<img alt="Logo" src="assets/media/logos/logo-2.svg" class="h-30px" />
+								<a href="{{ route('dashboard') }}" class="d-lg-none">
+									<img alt="Logo" src="assets/media/logos/Bank_of_Maharashtra_logo.png" class="h-30px" />
 								</a>
 							</div>
 							<!--end::Mobile logo-->
@@ -170,15 +170,16 @@
 									<!--begin::User menu-->
 									<div class="d-flex align-items-center ms-1" id="kt_header_user_menu_toggle">
 										<!--begin::Menu wrapper-->
-											<!--begin::Avatar-->
+											<!--begin::Avatar
 											<div class="symbol symbol-md-40px me-5">
 												<img alt="Logo" src="assets/media/avatars/300-1.jpg" />
-											</div>
+											</div>-->
 											<!--end::Avatar-->
 											<!--begin::Username-->
 											<div class="d-flex flex-column">
-												<div class="fw-bolder d-flex align-items-center fs-5">Nikhil Jagtap
-												<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span></div> 
+												<div class="fw-bolder d-flex align-items-center fs-5">Hi, Nikhil Jagtap
+											<!--	<span class="badge badge-light-success fw-bolder fs-8 px-2 py-1 ms-2">Pro</span> -->
+											</div> 
 											<!--	<a href="#" class="fw-bold text-muted text-hover-primary fs-7">max@kt.com</a> -->
 											</div>
 											<!--end::Username-->
@@ -187,6 +188,14 @@
 									<!--end::User menu-->
 								</div>
 								<!--end::Toolbar wrapper-->
+
+								<div class="d-flex align-items-center ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
+										<!--begin::Menu wrapper-->
+										<div class="symbol-30px symbol-md-40px" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">
+											<img src="assets/media/logos/logo-1.png" alt="logo">
+										</div>
+										<!--end::Menu wrapper-->
+									</div>
 							</div>
 							<!--end::Wrapper-->
 
@@ -206,7 +215,7 @@
 						<!--begin::Post-->
 						<div class="post d-flex flex-column-fluid" id="kt_post">
 							<!--begin::Container-->
-							<div id="kt_content_container" class="container-xxl">
+							<div id="kt_content_container">
 
 								@yield('content')
 

@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EntityUriReqCntroller;
+use App\Http\Controllers\EntityUriReqController;
+use App\Http\Controllers\EntityDocReqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,8 @@ use App\Http\Controllers\EntityUriReqCntroller;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post('entity-uri-request', [EntityUriReqCntroller::class, 'handle']);
+Route::post('entity-uri-request', [EntityUriReqController::class, 'handle']);
+Route::post('entity-doc-request', [EntityDocReqController::class, 'handle']);
 
 
 
